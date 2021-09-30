@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> Info Station Creative </title>
+	<style>
+		*{margin: 0;padding: 0;}
+		.istation__wrapper *{ margin: 0;padding: 0; }
+		.istation__wrapper {
+			width: 100%;
+			height: 100vh;
+			position: relative;
+			cursor: pointer;
+		}
+
+		.istation__wrapper .istation__wrapper_area{
+			position: absolute;
+			background-image: url('images/50120.jpg'); 
+			background-repeat: repeat-x; 
+			width: 100%; 
+			height: 60px; 
+			bottom: 0px; 
+			left: 0px;
+			-webkit-transition: height 0.3s linear;
+		  	-moz-transition: height 0.3s linear;
+		  	-ms-transition: height 0.3s linear;
+		  	-o-transition: height 0.3s linear;
+		  	transition: height 0.3s linear;
+		  	height: 60px;
+		} 
+
+		.istation__creative_wrapper {
+			width: 900px;
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin-left: auto;
+			margin-right: auto;
+			background-color: #4145c2;
+			border-radius: 25px 25px 0px 0px;
+			filter: drop-shadow(rgba(0, 0, 0, 0.5) 0px 0px 5px);
+			-webkit-transition: height 0.3s linear;
+		  	-moz-transition: height 0.3s linear;
+		  	-ms-transition: height 0.3s linear;
+		  	-o-transition: height 0.3s linear;
+		  	transition: height 0.3s linear;
+		  	height: 80px;
+		}
+
+		.istation__creative_header {			
+			width: 900px;
+			height: 56px;
+			position: absolute;
+			background-image: url('images/drip.png'); 
+			background-repeat: repeat-x;
+			border-radius: 25px 25px 0px 0px;
+		}
+
+		.istation__creative_area {position: absolute;left: 0;bottom: 0;}
+		.istation__creative_area .istation__slider{float: left;}
+		.istation__creative_area .istation__slider img{max-width: 100%;}
+		.istation__creative_area .istation__slide_1{
+			position: absolute;
+		    width: 148px;
+		    height: 41px;
+		    left: 105px;
+		    -webkit-transition: bottom 0.3s linear;
+		  	-moz-transition: bottom 0.3s linear;
+		  	-ms-transition: bottom 0.3s linear;
+		  	-o-transition: bottom 0.3s linear;
+		  	transition: bottom 0.3s linear;
+		  	bottom: 20px;
+		}
+
+		.istation__creative_area .istation__slide_2{
+			position: absolute;
+		  	transition: width 0.5s linear, height 0.5s linear, bottom 0.5s linear;
+			width: 168px;
+			height: 100px;
+			left: 265px;
+			bottom: 0;
+		}
+
+		.istation__creative_area .istation__slide_3{
+			position: absolute;
+			width: 182px;
+			height: 57px;
+			left: 459px;
+			-webkit-transition: bottom 0.3s linear;
+		  	-moz-transition: bottom 0.3s linear;
+		  	-ms-transition: bottom 0.3s linear;
+		  	-o-transition: bottom 0.3s linear;
+		  	transition: bottom 0.3s linear;
+		  	bottom: 10px;
+		}
+
+		.istation__creative_area .istation__slide_4{
+			position: absolute;
+			width: 148px;
+			height: 41px;
+			left: 670px;
+			/*bottom: 15px;*/
+			-webkit-transition: bottom 0.3s linear;
+		  	-moz-transition: bottom 0.3s linear;
+		  	-ms-transition: bottom 0.3s linear;
+		  	-o-transition: bottom 0.3s linear;
+		  	transition: bottom 0.3s linear;
+		  	bottom: 15px;
+		}
+
+		.istation__creative_area .istation__slide_4 img{
+			padding: 6px;
+		}
+
+		.istation__wrap_increase {
+			-webkit-transition: height 0.3s linear;
+		  	-moz-transition: height 0.3s linear;
+		  	-ms-transition: height 0.3s linear;
+		  	-o-transition: height 0.3s linear;
+		  	transition: height 0.3s linear;
+		  	height: 120px !important;
+		}
+
+		.istation__creative_increase {
+			-webkit-transition: height 0.3s linear;
+		  	-moz-transition: height 0.3s linear;
+		  	-ms-transition: height 0.3s linear;
+		  	-o-transition: height 0.3s linear;
+		  	transition: height 0.3s linear;
+		  	height: 170px !important;
+		}
+
+        .istation__fslide {
+		  	bottom: 40px !important;
+        }
+        .istation__sndslide {
+		  	width: 225px !important;
+		  	height: 195px !important;
+        }
+        .istation__trdslide {
+		  	bottom: 42px !important;
+        }
+        .istation__fthslide {
+		  	bottom: 45px !important;
+        }
+
+        @keyframes showZoomIn {
+		    from {transform: scale3d(.5, .5, .5)}
+		    to {transform: scale3d(1, 1, 1)}
+		} 
+		.showZoomIn {animation: showZoomIn .5s ease;}
+
+        @keyframes showZoomOut {
+		    0% {transform: scale3d(1, 1, 1) }
+		    100% {transform: scale3d(.3, .3, .3)}
+		} 
+		.showZoomOut {animation: showZoomOut .5s;}
+		.hidden { display: none; }
+
+	</style>
+</head>
+<body>
+
+
+	<div class="istation__wrapper">
+
+		<div class="istation__wrapper_area">
+			<div class="istation__creative_wrapper">
+				<div class="istation__creative_header"></div>
+				<div class="istation__creative_area">
+					<div class="istation__slider istation__slide_1">
+						<img src="images/logo.png" alt="">
+					</div>
+					<div class="istation__slider istation__slide_2">
+						<img src="images/device.png" alt="">
+					</div>
+					<div class="istation__slider istation__slide_3">
+						<img src="images/copy.png" alt="">
+					</div>
+					<div class="istation__slider istation__slide_4">
+						<img src="images/btn.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+
+	<script>
+		(function(){
+			let wrapper_area 		= document.querySelector( '.istation__wrapper_area' );
+			let creative_wrapper 	= document.querySelector( '.istation__creative_wrapper' );
+			let istation__slide_1 	= document.querySelector( '.istation__slide_1' );
+			let istation__slide_2 	= document.querySelector( '.istation__slide_2' );
+			let istation__slide_3 	= document.querySelector( '.istation__slide_3' );
+			let istation__slide_4 	= document.querySelector( '.istation__slide_4' );
+
+			let istation__asset_link 	= 'images/';
+			let istation__slide_2_img 	= 'device.png';
+
+			wrapper_area.addEventListener("mouseenter", function( event ) {
+				addClass(event.target, 'istation__wrap_increase');
+				addClass(creative_wrapper, 'istation__creative_increase');
+				addClass(istation__slide_1, 'istation__fslide');
+				addClass(istation__slide_2, 'showZoomOut');
+				addClass(istation__slide_3, 'istation__trdslide');
+				addClass(istation__slide_4, 'istation__fthslide');
+
+				istation__slide_2.style.bottom = "-100px";
+
+				setTimeout(function() {
+					istation__slide_2.querySelector('img').src = istation__asset_link + 'device-b.png';
+					setTimeout(function() {
+						removeClass(istation__slide_2, 'showZoomOut');
+						addClass(istation__slide_2, 'istation__sndslide');
+						addClass(istation__slide_2, 'showZoomIn');
+						istation__slide_2.style.bottom = "0";						
+					}, 100);
+				}, 500);
+
+			}, false);
+
+			wrapper_area.addEventListener("mouseleave", function( event ) {
+				removeClass( event.target, 'istation__wrap_increase');
+				removeClass( creative_wrapper, 'istation__creative_increase');
+				removeClass( istation__slide_1, 'istation__fslide');
+				removeClass( istation__slide_2, 'showZoomOut');
+				removeClass( istation__slide_2, 'showZoomIn');
+				istation__slide_2.style.bottom = "0";
+				removeClass( istation__slide_2, 'istation__sndslide');
+				removeClass( istation__slide_3, 'istation__trdslide');
+				removeClass( istation__slide_4, 'istation__fthslide');
+				setTimeout(function() {
+					// istation__slide_2.querySelector('img').src = istation__asset_link + 'device.png';
+				}, 400);				
+			}, false);
+
+
+		    function addClass ( iwrapper, class_name ) {
+		    	iwrapper.classList ? iwrapper.classList.add( class_name) : iwrapper.className += ' ' + class_name;
+		    }
+
+		    function removeClass ( iwrapper, class_name ) {
+		    	iwrapper.className = iwrapper.className.replace( class_name, '' );
+		    }
+		})();
+	</script>
+	
+</body>
+</html>
